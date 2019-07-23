@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.5",
+  "name": "Github full path title",
+  "description": "Sets tab title to the full file path on GitHub, rather than `$repo/filename.ext`.",
+  "icons": {
+    "48": "/github-icon.svg",
+    "96": "/github-icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.github.com/*/blob/*",
+        "*://github.com/*/blob/*"
+      ],
+      "js": ["script.js"]
+    }
+  ]
+}
